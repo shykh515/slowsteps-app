@@ -1,0 +1,165 @@
+/* ============================================================
+   GlowSteps Custom Brand Styles
+   Primary: #C4985F | Background: #F7F2EC | Text: #1A1A1A
+   ============================================================ */
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4,
+.product__title,
+.product-item__title {
+  font-family: var(--font-heading-family);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Navigation hover color ---------- */
+.header__menu-item:hover,
+.header__menu-item:focus,
+.header__active-menu-item,
+.header__menu-item--active {
+  color: #C4985F !important;
+  text-decoration: none;
+}
+
+.header__submenu .header__menu-item:hover {
+  color: #C4985F !important;
+}
+
+/* ---------- Price in gold on product & collection pages ---------- */
+.price__current,
+.price .price-item--regular,
+.price .price-item--sale,
+.product__price .price-item,
+.card__information .price-item--regular {
+  color: #C4985F;
+  font-weight: 600;
+}
+
+/* ---------- Buttons ---------- */
+.button--primary,
+.shopify-payment-button__button--branded {
+  background-color: #C4985F;
+  border-color: #C4985F;
+  color: #FFFFFF;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: #b08750;
+  border-color: #b08750;
+  color: #FFFFFF;
+}
+
+.button--secondary {
+  border-color: #C4985F;
+  color: #C4985F;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: #C4985F;
+  color: #FFFFFF;
+}
+
+/* ---------- Announcement bar (homepage strip) ---------- */
+.announcement-bar .announcement-bar__message {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ---------- Collection page: vertical filter sidebar label ---------- */
+.facets__heading {
+  color: #C4985F;
+  font-weight: 700;
+}
+
+/* ---------- Quick add button ---------- */
+.quick-add__submit {
+  background-color: #C4985F;
+  color: #FFFFFF;
+}
+
+.quick-add__submit:hover {
+  background-color: #b08750;
+}
+
+/* ---------- Product page: Add to cart ---------- */
+.product-form__submit {
+  background-color: #C4985F;
+  border-color: #C4985F;
+  color: #FFFFFF;
+}
+
+.product-form__submit:hover,
+.product-form__submit:focus {
+  background-color: #b08750;
+  border-color: #b08750;
+}
+
+/* ---------- Sticky add to cart — mobile ---------- */
+@media screen and (max-width: 749px) {
+  .product__info-wrapper .product-form {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    background-color: #F7F2EC;
+    padding: 12px 16px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  }
+
+  .product__info-wrapper .product-form__submit {
+    width: 100%;
+  }
+}
+
+/* ---------- Sale badge color ---------- */
+.badge--sale {
+  background-color: #C4985F;
+  color: #FFFFFF;
+}
+
+/* ---------- Footer copyright ---------- */
+.footer__copyright {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+/* ---------- Trust badges (multicolumn section) ---------- */
+.multicolumn-list__item .multicolumn-card__info h3 {
+  color: #C4985F;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.multicolumn-list__item .multicolumn-card__info p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ---------- Card hover effect ---------- */
+.card-wrapper:hover .card__media img {
+  transform: scale(1.03);
+  transition: transform 0.4s ease;
+}
+
+.card__media img {
+  transition: transform 0.4s ease;
+}
+
+/* ---------- Section headings ---------- */
+.title-wrapper h2.title {
+  position: relative;
+  display: inline-block;
+}
+
+.title-wrapper h2.title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #C4985F;
+  margin: 8px auto 0;
+}
