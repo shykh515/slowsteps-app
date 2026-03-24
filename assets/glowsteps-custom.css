@@ -1,165 +1,590 @@
-/* ============================================================
-   GlowSteps Custom Brand Styles
-   Primary: #C4985F | Background: #F7F2EC | Text: #1A1A1A
-   ============================================================ */
+/* ================================================================
+   GlowSteps — Complete Brand Stylesheet
+   Primary Gold:  #C4985F
+   Background:    #F7F2EC
+   Dark:          #1A1A1A
+   Shadow/Accent: #8A6240
+   ================================================================ */
 
-/* ---------- Typography ---------- */
-h1, h2, h3, h4, .h0, .h1, .h2, .h3, .h4,
-.product__title,
-.product-item__title {
-  font-family: var(--font-heading-family);
-  letter-spacing: 0.02em;
+/* ----------------------------------------------------------------
+   1. ANNOUNCEMENT BAR — Marquee scroll effect
+   ---------------------------------------------------------------- */
+.announcement-bar {
+  overflow: hidden !important;
 }
 
-/* ---------- Navigation hover color ---------- */
-.header__menu-item:hover,
-.header__menu-item:focus,
-.header__active-menu-item,
-.header__menu-item--active {
-  color: #C4985F !important;
-  text-decoration: none;
-}
-
-.header__submenu .header__menu-item:hover {
-  color: #C4985F !important;
-}
-
-/* ---------- Price in gold on product & collection pages ---------- */
-.price__current,
-.price .price-item--regular,
-.price .price-item--sale,
-.product__price .price-item,
-.card__information .price-item--regular {
-  color: #C4985F;
+.announcement-bar__message {
+  display: inline-block;
+  white-space: nowrap;
+  animation: gs-marquee 28s linear infinite;
   font-weight: 600;
-}
-
-/* ---------- Buttons ---------- */
-.button--primary,
-.shopify-payment-button__button--branded {
-  background-color: #C4985F;
-  border-color: #C4985F;
-  color: #FFFFFF;
-}
-
-.button--primary:hover,
-.button--primary:focus {
-  background-color: #b08750;
-  border-color: #b08750;
-  color: #FFFFFF;
-}
-
-.button--secondary {
-  border-color: #C4985F;
-  color: #C4985F;
-}
-
-.button--secondary:hover,
-.button--secondary:focus {
-  background-color: #C4985F;
-  color: #FFFFFF;
-}
-
-/* ---------- Announcement bar (homepage strip) ---------- */
-.announcement-bar .announcement-bar__message {
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-/* ---------- Collection page: vertical filter sidebar label ---------- */
-.facets__heading {
-  color: #C4985F;
-  font-weight: 700;
-}
-
-/* ---------- Quick add button ---------- */
-.quick-add__submit {
-  background-color: #C4985F;
-  color: #FFFFFF;
-}
-
-.quick-add__submit:hover {
-  background-color: #b08750;
-}
-
-/* ---------- Product page: Add to cart ---------- */
-.product-form__submit {
-  background-color: #C4985F;
-  border-color: #C4985F;
-  color: #FFFFFF;
-}
-
-.product-form__submit:hover,
-.product-form__submit:focus {
-  background-color: #b08750;
-  border-color: #b08750;
-}
-
-/* ---------- Sticky add to cart — mobile ---------- */
-@media screen and (max-width: 749px) {
-  .product__info-wrapper .product-form {
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    background-color: #F7F2EC;
-    padding: 12px 16px;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
-  }
-
-  .product__info-wrapper .product-form__submit {
-    width: 100%;
-  }
-}
-
-/* ---------- Sale badge color ---------- */
-.badge--sale {
-  background-color: #C4985F;
-  color: #FFFFFF;
-}
-
-/* ---------- Footer copyright ---------- */
-.footer__copyright {
-  font-size: 0.8rem;
-  opacity: 0.75;
-}
-
-/* ---------- Trust badges (multicolumn section) ---------- */
-.multicolumn-list__item .multicolumn-card__info h3 {
-  color: #C4985F;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  font-size: 0.82rem;
   text-transform: uppercase;
 }
 
-.multicolumn-list__item .multicolumn-card__info p {
-  font-size: 0.9rem;
-  opacity: 0.9;
+@keyframes gs-marquee {
+  0%   { transform: translateX(60vw); }
+  100% { transform: translateX(-100%); }
 }
 
-/* ---------- Card hover effect ---------- */
-.card-wrapper:hover .card__media img {
-  transform: scale(1.03);
-  transition: transform 0.4s ease;
+/* ----------------------------------------------------------------
+   2. HEADER — Dark nav, gold hover
+   ---------------------------------------------------------------- */
+.header__menu-item,
+.header__menu-item > a {
+  color: #F7F2EC;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
 }
 
-.card__media img {
-  transition: transform 0.4s ease;
+.header__menu-item:hover,
+.header__menu-item:hover > a,
+.header__active-menu-item,
+.header__active-menu-item > a {
+  color: #C4985F !important;
 }
 
-/* ---------- Section headings ---------- */
-.title-wrapper h2.title {
+.header__heading-link:hover {
+  opacity: 0.85;
+}
+
+/* ----------------------------------------------------------------
+   3. TYPOGRAPHY — Headings
+   ---------------------------------------------------------------- */
+h1, h2, h3, h4,
+.h0, .h1, .h2, .h3, .h4,
+.product__title,
+.card__heading {
+  font-family: var(--font-heading-family);
+  letter-spacing: 0.015em;
+}
+
+/* Decorative gold underline on section titles */
+.title-wrapper .title,
+.title-wrapper-with-link .title {
   position: relative;
   display: inline-block;
 }
 
-.title-wrapper h2.title::after {
+.title-wrapper .title::after,
+.title-wrapper-with-link .title::after {
   content: '';
   display: block;
-  width: 50px;
+  width: 48px;
   height: 2px;
   background: #C4985F;
-  margin: 8px auto 0;
+  margin: 10px auto 0;
+}
+
+/* ----------------------------------------------------------------
+   4. BUTTONS — Gold primary, gold outline secondary
+   ---------------------------------------------------------------- */
+.button,
+.button--primary {
+  background-color: #C4985F;
+  border-color: #C4985F;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s, border-color 0.25s, transform 0.15s;
+}
+
+.button:hover,
+.button--primary:hover {
+  background-color: #b08750;
+  border-color: #b08750;
+  transform: translateY(-1px);
+}
+
+.button--secondary {
+  background-color: transparent;
+  border-color: #C4985F;
+  color: #C4985F !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.button--secondary:hover {
+  background-color: #C4985F;
+  color: #FFFFFF !important;
+}
+
+/* Scheme-4 (dark bg) — outline button should be cream */
+.color-scheme-4 .button--secondary {
+  border-color: #F7F2EC;
+  color: #F7F2EC !important;
+}
+
+.color-scheme-4 .button--secondary:hover {
+  background-color: #F7F2EC;
+  color: #1A1A1A !important;
+}
+
+/* ----------------------------------------------------------------
+   5. PRICE — Gold everywhere
+   ---------------------------------------------------------------- */
+.price__current,
+.price-item--regular,
+.price-item--sale {
+  color: #C4985F;
+  font-weight: 700;
+}
+
+.price-item--regular:not(.price-item--sale) {
+  color: #C4985F;
+}
+
+.price__compare {
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* ----------------------------------------------------------------
+   6. PRODUCT CARDS — Hover zoom + gold accents
+   ---------------------------------------------------------------- */
+.card-wrapper .card__media img,
+.card-wrapper .media img {
+  transition: transform 0.45s ease;
+}
+
+.card-wrapper:hover .card__media img,
+.card-wrapper:hover .media img {
+  transform: scale(1.05);
+}
+
+.card__heading a {
+  color: #1A1A1A;
+  transition: color 0.2s;
+}
+
+.card__heading a:hover {
+  color: #C4985F;
+}
+
+/* Quick-add button */
+.quick-add__submit,
+.product-form__submit {
+  background-color: #C4985F !important;
+  border-color: #C4985F !important;
+  color: #FFFFFF !important;
+}
+
+.quick-add__submit:hover,
+.product-form__submit:hover {
+  background-color: #b08750 !important;
+  border-color: #b08750 !important;
+}
+
+/* ----------------------------------------------------------------
+   7. BADGE — NEW / SALE / HOT
+   ---------------------------------------------------------------- */
+.badge--sale,
+.badge {
+  background-color: #C4985F;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+}
+
+.badge--sale {
+  background-color: #C4985F;
+}
+
+/* ----------------------------------------------------------------
+   8. TRUST BADGES (Homepage multicolumn — dark bg)
+   ---------------------------------------------------------------- */
+.color-scheme-4 .multicolumn-card__info h3,
+.color-scheme-4 .multicolumn-card__info .h3 {
+  color: #C4985F;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.color-scheme-4 .multicolumn-card__info p {
+  color: #F7F2EC;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------
+   9. CUSTOMER REVIEWS SECTION (custom-liquid)
+   ---------------------------------------------------------------- */
+.gs-reviews-section {
+  background: #F7F2EC;
+  padding: 72px 20px;
+}
+
+.gs-reviews-section .page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gs-reviews-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.gs-reviews-label {
+  color: #C4985F;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.gs-reviews-title {
+  font-family: var(--font-heading-family);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #1A1A1A;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.gs-reviews-overall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gs-reviews-count {
+  color: #8A6240;
+  font-size: 0.9rem;
+}
+
+.gs-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .gs-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gs-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gs-review-card {
+  background: #FFFFFF;
+  border: 1px solid #C4985F;
+  border-radius: 4px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.25s;
+}
+
+.gs-review-card:hover {
+  box-shadow: 0 6px 24px rgba(196, 152, 95, 0.18);
+}
+
+.gs-stars {
+  color: #C4985F;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.gs-review-text {
+  color: #1A1A1A;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.gs-reviewer {
+  border-top: 1px solid #F7F2EC;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.gs-reviewer strong {
+  display: block;
+  color: #1A1A1A;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.gs-reviewer span {
+  color: #8A6240;
+  font-size: 0.8rem;
+}
+
+/* ----------------------------------------------------------------
+   10. INSTAGRAM SECTION (custom-liquid)
+   ---------------------------------------------------------------- */
+.gs-instagram-section {
+  background: #1A1A1A;
+  padding: 72px 20px;
+}
+
+.gs-insta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gs-insta-title {
+  font-family: var(--font-heading-family);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: #F7F2EC;
+  margin: 0 0 10px;
+}
+
+.gs-insta-sub {
+  color: #C4985F;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin: 0 0 36px;
+}
+
+.gs-insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .gs-insta-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gs-insta-tile {
+  aspect-ratio: 1;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.25s;
+  border: 1px solid rgba(196, 152, 95, 0.25);
+}
+
+.gs-insta-tile:hover {
+  opacity: 0.75;
+  border-color: #C4985F;
+}
+
+.gs-insta-overlay {
+  font-size: 2rem;
+  opacity: 0.35;
+}
+
+.gs-insta-btn {
+  display: inline-block;
+  padding: 12px 36px;
+  background: transparent;
+  border: 2px solid #C4985F;
+  color: #C4985F;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.25s, color 0.25s;
+}
+
+.gs-insta-btn:hover {
+  background: #C4985F;
+  color: #FFFFFF;
+}
+
+/* ----------------------------------------------------------------
+   11. ABOUT US SECTION (dark rich-text)
+   ---------------------------------------------------------------- */
+.color-scheme-4 .rich-text__heading {
+  color: #C4985F;
+}
+
+.color-scheme-4 .rich-text__caption {
+  color: #C4985F;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+}
+
+/* ----------------------------------------------------------------
+   12. PRODUCT PAGE
+   ---------------------------------------------------------------- */
+/* Price — large, gold */
+.product__info-wrapper .price__current,
+.product__info-wrapper .price-item--regular {
+  font-size: 1.6rem;
+  color: #C4985F;
+  font-weight: 700;
+}
+
+/* Full-width add to cart */
+.product-form__submit {
+  width: 100% !important;
+  background-color: #C4985F !important;
+  border-color: #C4985F !important;
+  color: #FFFFFF !important;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 16px !important;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+.product-form__submit:hover {
+  background-color: #b08750 !important;
+  transform: translateY(-1px);
+}
+
+/* Product trust badges (custom_liquid block) */
+.gs-product-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(196, 152, 95, 0.2);
+  border-bottom: 1px solid rgba(196, 152, 95, 0.2);
+  margin: 4px 0;
+}
+
+.gs-product-trust span {
+  font-size: 0.78rem;
+  color: #8A6240;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Accordion tabs */
+.accordion__summary {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.accordion__content {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* Sticky add to cart — mobile */
+@media screen and (max-width: 749px) {
+  .shopify-section-main-product {
+    padding-bottom: 80px;
+  }
+
+  .product-form__buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: #F7F2EC;
+    padding: 12px 16px;
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(196, 152, 95, 0.3);
+  }
+
+  .product-form__submit {
+    border-radius: 0 !important;
+  }
+}
+
+/* ----------------------------------------------------------------
+   13. COLLECTION PAGE — Sidebar filter accents
+   ---------------------------------------------------------------- */
+.facets__heading {
+  color: #C4985F !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.facets__label {
+  font-size: 0.88rem;
+  color: #1A1A1A;
+}
+
+/* Active filter pill */
+.active-facets__button {
+  background: #C4985F;
+  color: #FFFFFF;
+  border-color: #C4985F;
+}
+
+/* ----------------------------------------------------------------
+   14. FOOTER — 4-column dark
+   ---------------------------------------------------------------- */
+.footer__heading {
+  color: #C4985F !important;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-block__details-content a {
+  color: #F7F2EC;
+  opacity: 0.8;
+  font-size: 0.88rem;
+  line-height: 2;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.footer-block__details-content a:hover {
+  color: #C4985F;
+  opacity: 1;
+}
+
+.footer__newsletter .field__input:focus {
+  border-color: #C4985F;
+}
+
+.footer__newsletter .button {
+  background: #C4985F;
+  border-color: #C4985F;
+}
+
+/* Payment icons row */
+.footer__payment .icon-payment {
+  filter: grayscale(0.2) brightness(0.9);
+}
+
+/* ----------------------------------------------------------------
+   15. GLOBAL — Smooth scroll + selection color
+   ---------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(196, 152, 95, 0.25);
+  color: #1A1A1A;
+}
+
+/* Focus ring — gold */
+*:focus-visible {
+  outline: 2px solid #C4985F;
+  outline-offset: 2px;
 }

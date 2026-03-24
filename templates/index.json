@@ -23,7 +23,7 @@
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "View Collection",
-            "button_link_2": "shopify://collections/all",
+            "button_link_2": "shopify://collections",
             "button_style_secondary_2": true
           }
         }
@@ -34,159 +34,16 @@
         "buttons"
       ],
       "settings": {
-        "image_overlay_opacity": 45,
+        "image_overlay_opacity": 50,
         "image_height": "large",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
         "image_behavior": "none",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-4",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true
-      }
-    },
-    "announcement_strip": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement_1": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free delivery on orders above Rs. 3000 | COD available nationwide",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement_1"
-      ],
-      "settings": {
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "color_scheme": "scheme-af7b39dd-86fd-4a2c-bde4-0eaf8aa05736",
-        "show_line_separator": false,
-        "show_social": false,
-        "enable_country_selector": false,
-        "enable_language_selector": false
-      }
-    },
-    "category_section": {
-      "type": "collection-list",
-      "blocks": {
-        "bags_card": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "bags"
-          }
-        },
-        "shoes_card": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "shoes"
-          }
-        }
-      },
-      "block_order": [
-        "bags_card",
-        "shoes_card"
-      ],
-      "settings": {
-        "title": "Shop by Category",
-        "heading_size": "h2",
-        "image_ratio": "square",
-        "columns_desktop": 2,
-        "color_scheme": "scheme-1",
-        "show_view_all": false,
-        "swipe_on_mobile": true,
-        "columns_mobile": "2",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": true,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "new_arrivals": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "New Arrivals",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "new-arrivals",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-2",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "outline",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": true,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
-    "about_us": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "About GlowSteps",
-            "heading_size": "h2"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>GlowSteps is your go-to destination for premium ladies bags and shoes in Pakistan. We bring you the latest trends with quality you can trust, delivered right to your door.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 52,
-        "padding_bottom": 52
       }
     },
     "trust_badges": {
@@ -196,7 +53,7 @@
           "type": "column",
           "settings": {
             "title": "Free Delivery",
-            "text": "<p>On orders above Rs. 3000<\/p>",
+            "text": "<p>On all orders above Rs. 3,000<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -214,7 +71,7 @@
           "type": "column",
           "settings": {
             "title": "Easy Returns",
-            "text": "<p>Hassle-free return policy<\/p>",
+            "text": "<p>7-day hassle-free returns<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -242,33 +99,192 @@
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "center",
-        "background_style": "primary",
+        "background_style": "none",
         "button_label": "",
         "button_link": "",
         "swipe_on_mobile": false,
         "columns_mobile": "2",
         "color_scheme": "scheme-4",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "category_section": {
+      "type": "collection-list",
+      "blocks": {
+        "bags_card": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bags"
+          }
+        },
+        "shoes_card": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shoes"
+          }
+        }
+      },
+      "block_order": [
+        "bags_card",
+        "shoes_card"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "swipe_on_mobile": false,
+        "columns_mobile": "2",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 52,
+        "padding_bottom": 40
+      }
+    },
+    "new_arrivals": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-arrivals",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-2",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "padding_top": 52,
+        "padding_bottom": 40
+      }
+    },
+    "video_section": {
+      "type": "video",
+      "settings": {
+        "heading": "See GlowSteps in action",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "Watch our latest collection and styling tips",
+        "full_width": true,
+        "color_scheme": "scheme-4",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "reviews_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"gs-reviews-section\"><div class=\"page-width\"><div class=\"gs-reviews-header\"><p class=\"gs-reviews-label\">TESTIMONIALS<\/p><h2 class=\"gs-reviews-title\">What our customers say<\/h2><div class=\"gs-reviews-overall\"><span class=\"gs-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/span><span class=\"gs-reviews-count\">4.9\/5 based on 200+ reviews<\/span><\/div><\/div><div class=\"gs-reviews-grid\"><div class=\"gs-review-card\"><div class=\"gs-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/div><p class=\"gs-review-text\">&ldquo;Amazing quality bag! Exactly as shown in photos. Delivery was fast and packaging was beautiful. Will definitely order again from GlowSteps!&rdquo;<\/p><div class=\"gs-reviewer\"><strong>Aisha K.<\/strong><span>Karachi<\/span><\/div><\/div><div class=\"gs-review-card\"><div class=\"gs-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/div><p class=\"gs-review-text\">&ldquo;Ordered the shoulder bag and I am absolutely in love. The leather quality is premium and the gold hardware looks so elegant. Highly recommended!&rdquo;<\/p><div class=\"gs-reviewer\"><strong>Fatima R.<\/strong><span>Lahore<\/span><\/div><\/div><div class=\"gs-review-card\"><div class=\"gs-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/div><p class=\"gs-review-text\">&ldquo;Best online shopping experience in Pakistan! GlowSteps delivers on time and the bags are even better in person. The COD option makes it so easy.&rdquo;<\/p><div class=\"gs-reviewer\"><strong>Sana M.<\/strong><span>Islamabad<\/span><\/div><\/div><div class=\"gs-review-card\"><div class=\"gs-stars\">&#9733;&#9733;&#9733;&#9733;&#9733;<\/div><p class=\"gs-review-text\">&ldquo;The stiletto heels I ordered are perfect! Comfortable and stylish. My friends keep asking where I got them. GlowSteps is my new favourite store!&rdquo;<\/p><div class=\"gs-reviewer\"><strong>Nadia A.<\/strong><span>Karachi<\/span><\/div><\/div><\/div><\/div><\/div>",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "instagram_section": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div style=\"text-align:center;padding:40px 20px;background:#F7F2EC;\"><h2 style=\"font-family:inherit;color:#1A1A1A;margin-bottom:12px;\">Follow Us on Instagram<\/h2><p style=\"color:#1A1A1A;margin-bottom:20px;\">@glowsteps<\/p><a href=\"https:\/\/instagram.com\/glowsteps\" target=\"_blank\" style=\"display:inline-block;padding:12px 32px;background:#C4985F;color:#fff;text-decoration:none;font-weight:600;letter-spacing:1px;\">View on Instagram<\/a><\/div>",
+        "custom_liquid": "<div class=\"gs-instagram-section\"><div class=\"page-width gs-insta-inner\"><p class=\"gs-reviews-label\">SOCIAL<\/p><h2 class=\"gs-insta-title\">Follow us @glowsteps.pk<\/h2><p class=\"gs-insta-sub\">Tag us for a chance to be featured<\/p><div class=\"gs-insta-grid\"><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 1\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 2\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 3\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 4\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 5\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-tile\" aria-label=\"Instagram post 6\"><span class=\"gs-insta-overlay\">&#128247;<\/span><\/a><\/div><a href=\"https:\/\/instagram.com\/glowsteps.pk\" target=\"_blank\" class=\"gs-insta-btn\">View on Instagram<\/a><\/div><\/div>",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "about_us_banner": {
+      "type": "rich-text",
+      "blocks": {
+        "label": {
+          "type": "caption",
+          "settings": {
+            "text": "OUR STORY",
+            "text_style": "caption"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "About GlowSteps",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>GlowSteps is your go-to destination for premium ladies bags and shoes in Pakistan. We bring you the latest international trends with quality you can trust, delivered right to your doorstep. Every piece in our collection is carefully selected to make you look and feel your absolute best.<\/p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/about-us",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "label",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
     "hero_banner",
-    "announcement_strip",
+    "trust_badges",
     "category_section",
     "featured_products",
     "new_arrivals",
-    "about_us",
-    "trust_badges",
-    "instagram_section"
+    "video_section",
+    "reviews_section",
+    "instagram_section",
+    "about_us_banner"
   ]
 }
